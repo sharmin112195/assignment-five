@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="">
+    <header class="">
+       <div class="flex justify-around mt-8 bg-[#F9F7F3]">
+        <button onclick="navigateToBlog()" class="bg-lime-300 px-8 py-4 rounded-xl font-bold" >Blog</button>
+        <div>
+                <div class="flex items-center gap-3">
+                    <img src="./assets/logo.png" alt="">
+                  <div>
+                    <h4 class="text-xl font-semibold">Donate Bangladesh</h4>                  
+                  </div>
+                </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <img src="./assets/coin.png" alt="">
+            <span class="font-medium">5500 BDT</span>
+        </div>
+       </div> 
+       <div class="text-center mt-10">
+        <button class="w-1/6 py-2 rounded-md font-semibold focus:outline-none transition-colors duration-200 bg-lime-300">Donation</button>
+        <button class="w-1/6 py-2  rounded-md font-semibold focus:outline-none transition-colors duration-200 bg-lime-300">History</button>
+       </div>
+    </header>
+    <main>
+      <div class="card card-side bg-base-100 shadow-xl mt-8
+      mx-16 border-solid border-2 border-black-300">
+        
+          <img
+            src="./assets/noakhali.png"
+            alt="" class="p-6" />
+        
+        <div class="card-body">
+          <div class="bg-slate-200 py-2 px-4 rounded-md flex justify-start gap-3 w-1/4">
+            
+            <img src="./assets/coin.png" alt=""> 
+            <span>1000 BDT</span>
+            
+          </div>
+          <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+          <p>Click the button to watch on Jetflix app.</p>
+          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-11/12" required />
+        
+            <button class="justify-center bg-lime-400 font-semibold py-2 px-4 cursor-pointer rounded-md w-11/12">Donate Now</button>
+          
+        </div>
+      </div>
+    </main>
+ <script src="./js/index.js"></script> 
+ <script src="./js/utilities.js"></script>
+ <script>
+function navigateToBlog(){
+    window.location.href = "home.html"
+}
+ </script>  
 </body>
 </html>
