@@ -12,7 +12,7 @@ document.getElementById('donate-btn-noakhali')
     return;
    }
 
-   if(!isNaN(donation) || isNaN(donation)){
+   if(isNaN(donation)){
     alert('Please enter a valid number');
     cardSectionById('Successfully-card-section')
     return
@@ -44,7 +44,7 @@ document.getElementById('donate-btn-feni')
     return;
    }
 
-   if(!isNaN(donation) || isNaN(donation)){
+   if(isNaN(donation)){
     alert('Please enter a valid number');
     cardSectionById('Successfully-card-section')
     return
@@ -77,7 +77,7 @@ document.getElementById('quota-donate-btn')
     return;
    }
 
-   if(!isNaN(donation) || isNaN(donation)){
+   if(isNaN(donation)){
     alert('Please enter a valid number');
     cardSectionById('Successfully-card-section')
     return
