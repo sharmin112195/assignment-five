@@ -3,3 +3,7 @@ function donationAmount(id){
     const donation = parseFloat(donationElement);
     return donation;
 }
+
+function cardSectionById(id){
+    document.getElementById(id).classList.add('hidden');
+} 
