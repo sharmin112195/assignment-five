@@ -6,7 +6,9 @@ document.getElementById('donate-btn-noakhali')
 
    const totalDonation = donation + peopleDonateAmount;
 
-   if(donation < 0){
+  
+
+   if(donation <= 0){
     alert('Invalid Donation Amount');
     cardSectionById('Successfully-card-section')
     return;
@@ -25,6 +27,12 @@ document.getElementById('donate-btn-noakhali')
 document.getElementById('donate-input').value = '';
    
    const balance = parseFloat(document.getElementById('nav-btn-amount').innerText);
+
+   if(balance < donation){
+      alert('You do not enough money');
+      cardSectionById('Successfully-card-section')
+      return;
+   }
    const newBalance = balance - donation;
    document.getElementById('nav-btn-amount').innerText = newBalance;
  })
@@ -56,6 +64,12 @@ document.getElementById('donate-btn-feni')
 document.getElementById('feni-donate-input').value = '';
    
    const balanceTwo = parseFloat(document.getElementById('nav-btn-amount').innerText);
+
+   if(balanceTwo < donation){
+      alert('You do not enough money');
+      cardSectionById('Successfully-card-section')
+      return;
+   }
    const newBalance = balanceTwo - donation;
    document.getElementById('nav-btn-amount').innerText = newBalance;
  })
@@ -90,6 +104,12 @@ document.getElementById('quota-donate-btn')
 document.getElementById('quota-input-donation').value = '';
    
    const balance = parseFloat(document.getElementById('nav-btn-amount').innerText);
+
+   if(balance < donation){
+      alert('You do not enough money');
+      cardSectionById('Successfully-card-section')
+      return;
+   }
    const newBalance = balance - donation;
    document.getElementById('nav-btn-amount').innerText = newBalance;
  })
