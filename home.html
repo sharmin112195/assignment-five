@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Important FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- font awesome link -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="mx-8">
      <div>
-        <button onclick="navigateToHome()" class="bg-lime-300" >Home</button>
+        <button onclick="navigateToHome()" class="bg-lime-300 mt-8 px-8 py-4 rounded-xl font-bold" >Home</button>
     </div>
-    <main>
-        <h1>Important FAQ</h1>
-        <div class="join join-vertical w-full">
+    <main class="mt-12">
+        <h1 class="text-3xl">Important FAQ <i class="fa-regular fa-message"></i></h1>
+        <div class="join join-vertical w-full mt-8">
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
               <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
               <div class="collapse-content">
                 <p>hello</p>
