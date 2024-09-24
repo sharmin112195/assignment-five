@@ -1,24 +1,25 @@
 // Donation for Noakhali
 document.getElementById('donate-btn-noakhali')
  .addEventListener('click', function(){
-    const donation = parseFloat(donationAmount('donate-input'))
-   const peopleDonateAmount =parseFloat(document.getElementById('money-add').innerText);
+    const donation = donationAmount('donate-input');   
+     const donationOne = parseFloat(donation);
+    const peopleDonateAmount =parseFloat(document.getElementById('money-add').innerText);
 
-   const totalDonation = donation + peopleDonateAmount;
+    const totalDonation = donationOne + peopleDonateAmount;
 
-  
+    if(isNaN(donation)){
+      alert('Please enter a valid number');
+      cardSectionById('Successfully-card-section')
+      return
+     }
 
-   if(donation <= 0){
+   if(donationOne <= 0 || donationOne > peopleDonateAmount){
     alert('Invalid Donation Amount');
     cardSectionById('Successfully-card-section')
     return;
    }
 
-   if(isNaN(donation)){
-    alert('Please enter a valid number');
-    cardSectionById('Successfully-card-section')
-    return
-   }
+   
 
    document.getElementById('money-add').innerText = totalDonation;
 
@@ -28,24 +29,25 @@ document.getElementById('donate-input').value = '';
    
    const balance = parseFloat(document.getElementById('nav-btn-amount').innerText);
 
-   if(balance < donation){
+   if(balance < donationOne){
       alert('You do not enough money');
       cardSectionById('Successfully-card-section')
       return;
    }
-   const newBalance = balance - donation;
+   const newBalance = balance - donationOne;
    document.getElementById('nav-btn-amount').innerText = newBalance;
 
 
-// history create html
+// history create html Noakhali
 const historyItem = document.createElement('div');
-historyItem.className = "bg-white p-3 rounded-md border-solid border-2 border-gray-400 mb-4 shadow-lg";
+historyItem.className = "bg-white p-3 rounded-md border-solid border-2 border-gray-400 mx-12 mb-4 shadow-lg";
 historyItem.innerHTML = `
-<h4 class ="text-lg text-gray-700 font-semibold"> ${donation} Taka is Donate for Flood at Noakhali, Bangladesh</h4> 
-<p class = "text-md text-gray-500 bg-gray-300 p-3 rounded-md">Date: ${ new Date().toLocaleDateString() }  ${new Date().toLocaleTimeString()}</p>
+<h4 class ="text-3xl text-gray-700 font-semibold"> ${donationOne} Taka is Donate for Flood at Noakhali, Bangladesh</h4> 
+<p class = "text-lg text-gray-500 bg-gray-100 p-3 rounded-md">Date: ${new Date()}</p>
 `
 const historyContainer = document.getElementById('history-container');
 historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
 
  })
 
@@ -58,7 +60,7 @@ document.getElementById('donate-btn-feni')
 
    const totalDonationTwo = donation + peopleDonateAmountFeni;
 
-   if(donation < 0){
+   if(donation <= 0 || donation > peopleDonateAmountFeni){
     alert('Invalid Donation Amount');
     cardSectionById('Successfully-card-section')
     return;
@@ -84,6 +86,18 @@ document.getElementById('feni-donate-input').value = '';
    }
    const newBalance = balanceTwo - donation;
    document.getElementById('nav-btn-amount').innerText = newBalance;
+
+   // history create html Feni
+const historyItem = document.createElement('div');
+ historyItem.className = "bg-white p-3 rounded-md border-solid border-2 border-gray-400 mx-12 mb-4 shadow-lg";
+ historyItem.innerHTML = `
+ <h4 class ="text-3xl text-gray-700 font-semibold"> ${donation} Taka is Donate for Flood Relief in Feni,Bangladesh</h4> 
+ <p class = "text-lg text-gray-500 bg-gray-100 p-3 rounded-md">Date: ${new Date()}</p>
+ `
+ const historyContainer = document.getElementById('history-container');
+ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+ 
  })
 
 //  Injured in the Quota Movement
@@ -97,7 +111,7 @@ document.getElementById('quota-donate-btn')
 
    const totalDonation = donation + peopleDonateAmount;
 
-   if(donation < 0){
+   if(donation <= 0 || donation > peopleDonateAmount){
     alert('Invalid Donation Amount');
     cardSectionById('Successfully-card-section')
     return;
@@ -124,7 +138,17 @@ document.getElementById('quota-input-donation').value = '';
    }
    const newBalance = balance - donation;
    document.getElementById('nav-btn-amount').innerText = newBalance;
- })
+
+      // history create html
+ const historyItem = document.createElement('div');
+ historyItem.className = "bg-white mx-12 p-3 rounded-md border-solid border-2 border-gray-400 mb-4 shadow-lg";
+ historyItem.innerHTML = `
+ <h4 class ="text-3xl text-gray-700 font-semibold"> ${donation} Taka is Aid for Injured in the Quota Movement</h4> 
+ <p class = "text-lg text-gray-500 bg-gray-100 p-3 rounded-md">Date: ${new Date()}</p>
+ `
+ const historyContainer = document.getElementById('history-container');
+ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+  })
 
 
 // donation and history button
@@ -142,6 +166,7 @@ historyTab.addEventListener('click', function(){
    );
    donationTab.classList.add("text-gray-500");
    document.getElementById('donation-full-section').classList.add('hidden');
+   document.getElementById('history-section').classList.remove('hidden');
 })
 
 donationTab.addEventListener('click', function(){
@@ -156,6 +181,8 @@ donationTab.addEventListener('click', function(){
    );
    historyTab.classList.add("text-gray-500");
    document.getElementById('donation-full-section').classList.remove('hidden');
+   document.getElementById('history-section').classList.add('hidden');
+
 })
 
 
