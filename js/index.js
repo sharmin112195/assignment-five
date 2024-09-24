@@ -35,6 +35,18 @@ document.getElementById('donate-input').value = '';
    }
    const newBalance = balance - donation;
    document.getElementById('nav-btn-amount').innerText = newBalance;
+
+
+// history create html
+const historyItem = document.createElement('div');
+historyItem.className = "bg-white p-3 rounded-md border-solid border-2 border-gray-400 mb-4 shadow-lg";
+historyItem.innerHTML = `
+<h4 class ="text-lg text-gray-700 font-semibold"> ${donation} Taka is Donate for Flood at Noakhali, Bangladesh</h4> 
+<p class = "text-md text-gray-500 bg-gray-300 p-3 rounded-md">Date: ${ new Date().toLocaleDateString() }  ${new Date().toLocaleTimeString()}</p>
+`
+const historyContainer = document.getElementById('history-container');
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
  })
 
 //  Donation for Feni
@@ -129,6 +141,7 @@ historyTab.addEventListener('click', function(){
       "bg-lime-300" 
    );
    donationTab.classList.add("text-gray-500");
+   document.getElementById('donation-full-section').classList.add('hidden');
 })
 
 donationTab.addEventListener('click', function(){
@@ -142,7 +155,13 @@ donationTab.addEventListener('click', function(){
       "bg-lime-300" 
    );
    historyTab.classList.add("text-gray-500");
+   document.getElementById('donation-full-section').classList.remove('hidden');
 })
+
+
+
+
+
 
 
 

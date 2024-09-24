@@ -7,3 +7,4 @@ function donationAmount(id){
 function cardSectionById(id){
     document.getElementById(id).classList.add('hidden');
 } 
+
