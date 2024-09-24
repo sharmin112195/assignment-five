@@ -49,7 +49,7 @@ historyItem.innerHTML = `
 `
 const historyContainer = document.getElementById('history-container');
 historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-
+document.getElementById("my_modal_1").showModal();
 
  })
 
@@ -99,7 +99,7 @@ const historyItem = document.createElement('div');
  `
  const historyContainer = document.getElementById('history-container');
  historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-
+ document.getElementById("my_modal_1").showModal();
  
  })
 
@@ -152,6 +152,7 @@ document.getElementById('quota-input-donation').value = '';
  `
  const historyContainer = document.getElementById('history-container');
  historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+ document.getElementById("my_modal_1").showModal();
   })
 
 

@@ -54,23 +54,24 @@
           <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
           <p>The flood situation in Noakhali has worsened due to continuous rain and upstream water, leading many people to seek shelters.</p>
           <input id="donate-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" required />
-
-          <!-- The button to open modal -->
-<label for="my_modal_6" id="donate-btn-noakhali" class="btn bg-lime-400 justify-center">Donate Now</label>
-<div id="Successfully-card-section">
-  <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-<div class="modal text-center" role="dialog">
+<!-- noakhali donate button -->
+  <button  id="donate-btn-noakhali" class="btn bg-lime-400 justify-center" >Donate Now</button>
+<dialog id="my_modal_1" class="modal">
   <div class="modal-box">
-    <h3 class="text-lg font-bold">Congrates!</h3>
+    <h3 class="text-2xl font-bold text-center">Congrates!</h3>
     <img class="mx-auto" src="./assets/coin.png" alt="">
-    <p class="py-4">You Have Donated for Humankind</p>
-    <h4 class="font-semibold">Successfully</h4>
+    <p class="py-4 text-center">You Have Donated for Humankind</p>
+    <h4 class="font-semibold text-center text-lg">Successfully</h4>
     <div class="modal-action">
-      <label for="my_modal_6" class="btn mx-auto">close confirmation</label>
+      <form method="dialog">
+        
+        <button class="btn mr-28 lg:mr-36">close confirmation</button>
+      </form>
     </div>
   </div>
-</div>
-</div>
+</dialog>
+
+
           
         </div>
       </div>
@@ -91,23 +92,25 @@
           </div>
           <h2 class="card-title">Donate for Flood Relief in Feni, Bangladesh</h2>
           <p>Flood Relief in Feni refers to humanitarian aid effors aimed at providing support to the people of Fani, Bangladesh, during and after severe flooding events.</p>
-          <input id="feni-donate-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-11/12" required />
+          <input id="feni-donate-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-11/12" required />            
+
+          <!-- Open the modal using ID.showModal() method -->
         
-          <label for="my_modal_6" id="donate-btn-feni" class="btn bg-lime-400 justify-center">Donate Now</label>
-          <div id="Successfully-card-section">
-            <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-          <div class="modal text-center" role="dialog">
-            <div class="modal-box">
-              <h3 class="text-lg font-bold">Congrates!</h3>
-              <img class="mx-auto" src="./assets/coin.png" alt="">
-              <p class="py-4">You Have Donated for Humankind</p>
-              <h4 class="font-semibold">Successfully</h4>
-              <div class="modal-action">
-                <label for="my_modal_6" class="btn mx-auto">close confirmation</label>
-              </div>
-            </div>
-          </div>
-          </div>
+<button  id="donate-btn-feni" class="btn bg-lime-400 justify-center" >Donate Now</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-2xl font-bold text-center">Congrates!</h3>
+    <img class="mx-auto" src="./assets/coin.png" alt="">
+    <p class="py-4 text-center">You Have Donated for Humankind</p>
+    <h4 class="font-semibold text-center text-lg">Successfully</h4>
+    <div class="modal-action">
+      <form method="dialog">
+        
+        <button class="btn mr-28 lg:mr-36">close confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
           
         </div>
       </div>
@@ -129,23 +132,23 @@
           <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
           <p>Aid for the injured in the Quota Movement provided medical support and financial assistance to those hurt during protests advocating for changes in Bangladesh's public sector job reservation system.</p>
           <input id="quota-input-donation" type="text" placeholder="Write Donation Amount" class="input input-bordered w-11/12" required />
-        
-          <label for="my_modal_6" id="quota-donate-btn" class="btn bg-lime-400 justify-center">Donate Now</label>
-          <div class="Successfully-card-section">
-            <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-          <div class="modal text-center" role="dialog">
-            <div class="modal-box">
-              <h3 class="text-lg font-bold">Congrates!</h3>
-              <img class="mx-auto" src="./assets/coin.png" alt="">
-              <p class="py-4">You Have Donated for Humankind</p>
-              <h4 class="font-semibold">Successfully</h4>
-              <div class="modal-action">
-                <label for="my_modal_6" class="btn mx-auto">close confirmation</label>
-              </div>
-            </div>
-          </div>
-          </div>
-          
+        <!-- card  -->           
+           <button  id="quota-donate-btn" class="btn bg-lime-400 justify-center" >Donate Now</button>
+           <dialog id="my_modal_1" class="modal">
+             <div class="modal-box">
+               <h3 class="text-2xl font-bold text-center">Congrates!</h3>
+               <img class="mx-auto" src="./assets/coin.png" alt="">
+               <p class="py-4 text-center">You Have Donated for Humankind</p>
+               <h4 class="font-semibold text-center text-lg">Successfully</h4>
+               <div class="modal-action">
+                 <form method="dialog">
+                   
+                   <button class="btn mr-28 lg:mr-32">close confirmation</button>
+                 </form>
+               </div>
+             </div>
+           </dialog>
+           
         </div>
       </div>
     </div>
