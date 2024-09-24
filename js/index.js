@@ -6,12 +6,14 @@ document.getElementById('donate-btn-noakhali')
     const peopleDonateAmount =parseFloat(document.getElementById('money-add').innerText);
 
     const totalDonation = donationOne + peopleDonateAmount;
-
+     
+    
     if(isNaN(donation)){
-      alert('Please enter a valid number');
-      cardSectionById('Successfully-card-section')
-      return
-     }
+       alert('Please enter a valid number');
+       cardSectionById('Successfully-card-section')
+        return 
+      }
+
 
    if(donationOne <= 0 || donationOne > peopleDonateAmount){
     alert('Invalid Donation Amount');
@@ -55,7 +57,8 @@ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
 document.getElementById('donate-btn-feni')
  .addEventListener('click', function(){
-    const donation = parseFloat(donationAmount('feni-donate-input'))
+   const donate = donationAmount('feni-donate-input')
+    const donation = parseFloat(donate)
    const peopleDonateAmountFeni =parseFloat(document.getElementById('feni-add-money').innerText);
 
    const totalDonationTwo = donation + peopleDonateAmountFeni;
@@ -66,7 +69,7 @@ document.getElementById('donate-btn-feni')
     return;
    }
 
-   if(isNaN(donation)){
+   if(isNaN(donate)){
     alert('Please enter a valid number');
     cardSectionById('Successfully-card-section')
     return
@@ -104,7 +107,8 @@ const historyItem = document.createElement('div');
 
 document.getElementById('quota-donate-btn')
  .addEventListener('click', function(){
-    const donation = parseFloat(donationAmount('quota-input-donation'))
+   const donateTwo = donationAmount('quota-input-donation')
+    const donation = parseFloat(donateTwo);
    const peopleDonateAmount =parseFloat(document.getElementById('quota-injured-add-money').innerText);
 
   
@@ -117,7 +121,7 @@ document.getElementById('quota-donate-btn')
     return;
    }
 
-   if(isNaN(donation)){
+   if(isNaN(donateTwo)){
     alert('Please enter a valid number');
     cardSectionById('Successfully-card-section')
     return
